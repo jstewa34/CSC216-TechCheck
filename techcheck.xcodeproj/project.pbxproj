@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C83FF362922CD2900261AC9 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83FF352922CD2900261AC9 /* Building.swift */; };
 		9CED78FF291C31A9000BA245 /* techcheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CED78EC291C31A8000BA245 /* techcheck.xcdatamodeld */; };
 		9CED7901291C31A9000BA245 /* techcheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED78EE291C31A8000BA245 /* techcheckApp.swift */; };
 		9CED7903291C31A9000BA245 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED78EF291C31A8000BA245 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C83FF352922CD2900261AC9 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		9CED78ED291C31A8000BA245 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		9CED78EE291C31A8000BA245 /* techcheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = techcheckApp.swift; sourceTree = "<group>"; };
 		9CED78EF291C31A8000BA245 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 				9CED78EE291C31A8000BA245 /* techcheckApp.swift */,
 				9CED7911291C3F5A000BA245 /* IssueView.swift */,
 				9CED78EF291C31A8000BA245 /* ContentView.swift */,
+				9C83FF352922CD2900261AC9 /* Building.swift */,
 				9CED78F0291C31A8000BA245 /* Persistence.swift */,
 				9CED78F1291C31A9000BA245 /* Assets.xcassets */,
 				9CED78EC291C31A8000BA245 /* techcheck.xcdatamodeld */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CED7901291C31A9000BA245 /* techcheckApp.swift in Sources */,
+				9C83FF362922CD2900261AC9 /* Building.swift in Sources */,
 				9CED7905291C31A9000BA245 /* Persistence.swift in Sources */,
 				9CED7912291C3F5A000BA245 /* IssueView.swift in Sources */,
 				9CED78FF291C31A9000BA245 /* techcheck.xcdatamodeld in Sources */,

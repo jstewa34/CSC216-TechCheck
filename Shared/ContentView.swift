@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var building = 0
+    @State private var building = Building.none
     @State private var room = 0
     @State private var issuePresenting = false
     
@@ -22,30 +22,24 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .font(.custom("GillSans", size: 35))
                 
-                Text("What building are you in?")
+                Text("Which building are you in?")
                     .font(.custom("GillSans", size: 25))
-                Picker(selection: $building, label: Text("Building")) {
-                    Text("Select your building...").tag(0)
-                    Text("Meliora").tag(1)
-                        .font(.custom("GillSans", size: 25))
-                    Text("Strong").tag(2)
-                        .font(.custom("GillSans", size: 25))
-                    Text("Hutch").tag(3)
-                        .font(.custom("GillSans", size: 25))
+                Picker("Which building are you in?", selection: $building) {
+                    ForEach(Building.allCases, id: \.self) { building in
+                        Text(building.name())
+                            .font(.custom("GillSans", size: 25))
+                    }
                 }
                 
-                Text("What room are you in?")
+                Text("Which room are you in?")
                     .font(.custom("GillSans", size: 25))
                 
-                Picker(selection: $room, label: Text("Room")) {
-                    Text("Select your room...").tag(0)
-                    Text("112").tag(1)
-                        .font(.custom("GillSans", size: 25))
-                    Text("123").tag(2)
-                        .font(.custom("GillSans", size: 25))
-                    Text("233").tag(3)
-                        .font(.custom("GillSans", size: 25))
-                }
+//                Picker("Which room are you in?", selection: $building) {
+//                    ForEach(Building.init(rawValue: Int(), id: \.self) { room_num in
+//                        Text(room_num)
+//                            .font(.custom("GillSans", size: 25))
+//                    }
+//                }
                 
                 Button("Next") {
                      issuePresenting.toggle()
