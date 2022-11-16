@@ -7,40 +7,29 @@
 
 import SwiftUI
 
-enum Building: Int, CaseIterable {
-    case none, hutch, morey, hoyt, harkness, gavett
+struct Building: Identifiable {
+    let buildingList: [String]
+    let id = UUID()
     
-    func name() -> String {
-        switch self {
-        case .none:
-            return "Select your building..."
-        case .hutch:
-            return "Hutch"
-        case .morey:
-            return "Morey"
-        case .hoyt:
-            return "Hoyt"
-        case .harkness:
-            return "Harkness"
-        case .gavett:
-            return "Gavett"
-        }
+    init() {
+        self.buildingList = ["Hutch", "Morey", "Hoyt", "Harkness", "Gavett"]
     }
     
-    func number() -> [String] {
-        switch self {
-        case .none:
-            return ["Select your rooom..."]
-        case .hutch:
+    func findRoom(building: String) -> [String] {
+        switch building {
+        case "Hutch":
             return ["112", "122", "123"]
-        case .morey:
+        case "Morey":
             return ["212", "222", "223"]
-        case .hoyt:
+        case "Hoyt":
             return ["312", "322", "323"]
-        case .harkness:
+        case "Harkness":
             return ["412", "422", "423"]
-        case .gavett:
+        case "Gavett":
             return ["512", "522", "523"]
+        default:
+            return ["Please pick a room"]
         }
     }
 }
+
